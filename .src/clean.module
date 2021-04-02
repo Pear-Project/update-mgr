@@ -1,0 +1,16 @@
+' Gambas module file
+
+'Copyright (c) 2021 Alexandru Balan under PearProject All Rights Reserved
+'This Software uses Pext-Installer - Copyrighted content from Axtlos, being part of PearProject
+'Copyright (c) 2021 Axtlos under PearProject All Rights Reserved
+'Any un-official modify of this software is strictly prohibited in any circumstance.
+'For questions about this software, mail Alex at alex@pearos.xyz
+
+Public Sub delete()                         'declaring the delete() function
+  Shell "rm -Rf /tmp/system-update/*" Wait    'removing the temp folder
+  make()                                    'calling the make() function
+End                                         'ending function declare
+
+Public Sub make()                           'declaring the make() function
+  Shell "mkdir -p /tmp/system-update" Wait  'making the temp folder
+End                                         'ending the function make()

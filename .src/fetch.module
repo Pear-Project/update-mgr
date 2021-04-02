@@ -1,0 +1,17 @@
+' Gambas module file
+
+'Copyright (c) 2021 Alexandru Balan under PearProject All Rights Reserved
+'This Software uses Pext-Installer - Copyrighted content from Axtlos, being part of PearProject
+'Copyright (c) 2021 Axtlos under PearProject All Rights Reserved
+'Any un-official modify of this software is strictly prohibited in any circumstance.
+'For questions about this software, mail Alex at alex@pearos.xyz
+
+Public Sub download()                                                                                                                           'starting the download() function declare
+  Shell "cd /tmp/system-update/ && wget https://updates.pearos.xyz/pearOS_updatefile_amd64.zip" Wait                                            'getting the file from server
+  Print "Downloaded"                                                                                                                            'printing the status of function
+End                                                                                                                                             'ending the function
+
+Public Sub install()                                                                                                                            'starting the install() function declare
+  Shell "unzip /tmp/system-update/pearOS_updatefile_amd64.zip -d /tmp/system-update" Wait                                                       'extracting the downloaded update in the temp folder
+  Print "Installed"                                                                                                                             'printing the status of function
+End                                                                                                                                             'ending download() function
