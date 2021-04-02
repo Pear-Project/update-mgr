@@ -1,12 +1,6 @@
-# Control-Centre
-A nice Control Centre that looks like macOS Big Sur Control Centre
-
-## Screenshots :)
-![Dark mode](Screenshots/dark_centre.png)
-Dark mode
-
-![Light mode](Screenshots/light_centre.png)
-Light mode
+# Update Manager for pearOS
+Update manager. It checks for updates everytime the system is booted.
+It uses an update server
 
 ## Dependencies
 
