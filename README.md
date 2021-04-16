@@ -29,6 +29,11 @@ It uses an update server
    $ cp -r ~/update-mgr/xyz.pearos.update-manager.desktop ~/.config/autostart
    # this was an example for adding autostart script to KDE based system
    ```
+   - move `update` file to `/usr/bin` and make it executable
+   ```sh
+   sudo cp ~/update-mgr/update /usr/bin
+   sudo chmod +x /usr/bin/update
+   ```
    - Enjoy :p
 
  - From Package:
