@@ -24,9 +24,9 @@ It uses an update server
    ```sh
    $ sudo cp <path to your previously built update-mgr.gambas> /usr/bin/update-mgr
    ```
-   - copy xyz.pearos.update-manager.desktop from the cloned repository to the autostart folder
+   - copy `xyz.pearos.update-manager.desktop` from the cloned repository to the autostart folder
    ```sh
-   $ cp -r ~/Control-Centre/xyz.pearos.control-centre ~/.config/autostart
+   $ cp -r ~/update-mgr/xyz.pearos.update-manager.desktop ~/.config/autostart
    # this was an example for adding autostart script to KDE based system
    ```
    - Enjoy :p
@@ -41,8 +41,8 @@ It uses an update server
    ```sh
    git clone https://github.com/alxb421/Control-Centre.git
    ```
-   - copy xyz.pearos.control-centre.desktop from the cloned repository to the autostart folder
+   - copy `xyz.pearos.update-manager.desktop` from the cloned repository to the autostart folder
    ```sh
-   $ cp -r ~/Control-Centre/xyz.pearos.control-centre.desktop ~/.config/autostart/
+   $ cp -r ~/update-mgr/xyz.pearos.update-manager.desktop ~/.config/autostart
    # this was an example for adding autostart script to KDE based system
    ```
