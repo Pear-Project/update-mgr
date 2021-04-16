@@ -46,3 +46,17 @@ It uses an update server
    $ cp -r ~/update-mgr/xyz.pearos.update-manager.desktop ~/.config/autostart
    # this was an example for adding autostart script to KDE based system
    ```
+   - move `update` file to `/usr/bin` and make it executable
+   ```sh
+   sudo cp ~/update-mgr/update /usr/bin
+   sudo chmod +x /usr/bin/update
+   ```
+   
+   ## Usage
+   Check for updates using `update-mgr` in terminal
+   See current installed update version by running `update -v` or `update --version`
+   See installed update changelog by running `update -c` or `update --changelog`
+   See more command by running `update -h` or `update --help`
+   
+   If there is an update available, after running `update-mgr`, it will open the PEXT-INSTALLER and send a notification to the user.
+   If there is no update available, it exits or returne `segmentation fault`.
