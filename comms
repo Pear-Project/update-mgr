@@ -1,9 +1,0 @@
-update=update;number=0;fname=$update;while [ -e "$fname" ];do printf -v fname '%s-%02d' "$update" "$((++number))";done;printf 'Will use "%s" as filename\n' "$fname";touch "$fname"
-//incremental function for keeping updates history
-
-wget https://updates.pearos.xyz/latest --output /tmp/pear-update/1
-//function to fetch updates
-
-
-kdialog --title 'Pear Update Manager' --passivepopup 'Updates are available. Open the System Update software to install them' 5
-//send notification if an update is available

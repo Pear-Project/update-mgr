@@ -7,6 +7,7 @@
 'For questions about this software, mail Alex at alex@pearos.xyz
 
 Public Sub available()                                                                                                                  'declaring the available() function
+Shell "echo '\e[43m❖ SUCCESS:\e[0m \e[93mAn update is availale and is ready to be installed!\e[0m'"
 Shell "kdialog --title 'Pear Update Manager' --passivepopup 'Updates are available. Open the System Update software to install them' 5" 'showing a KDE Notification if function called
-Shell "cd /usr/share/pext-installer && python3 pext-installer"                                                                      'opening pexet-installer if function is called
+Shell "cd /usr/share/pext-installer && python3 pext-installer"                                                                          'opening pexet-installer if function is called
 End                                                                                                                                     'ending the available() function

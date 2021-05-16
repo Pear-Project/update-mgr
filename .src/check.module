@@ -8,14 +8,19 @@
 
 Public Sub local_version()                                                                  'declaring the local_version() function
   Shell "update -v" To Main.installed_version                                               'getting the installed version and storring it into the variable
-  Print "local version is " & Main.installed_version                                        'printing local version for debug purposes
 End                                                                                         'endig the local_version() module
 
 Public Sub server_version()                                                                 'declaring server_version() function
   Shell "/tmp/system-update/update -v" To Main.fetched_version                              'getting the downloaded update's version and storring it into the var.
-  Print "server_version is " & Main.fetched_version                                         'printing available (not installed) version for debugging
-  If Val(Main.fetched_version) > Val(Main.installed_version) Then Main.new_update = True    'if the new update's version is bigger than installed version, then new_version boolean's value is 
-   Print Main.fetched_version                                                               'another print for debug
+  Print "Installed version is " & Main.installed_version                                    'printing local version for debug purposes
+  Print "Latest version is " & Main.fetched_version                                         'printing available (not installed) version for debugging
+  
+  If IsNull(Main.fetched_version) = True Then 
+    Shell "echo '\e[39m\e[41m! FATAL\e[0m:  \e[91mCould not contact the updates server. Are you connected to the internet?'"
+    Else If IsNull(Main.fetched_version) = False Then
+    If Val(Main.fetched_version) > Val(Main.installed_version) Then Main.new_update = True    'if the new update's version is bigger than installed version, then new_version boolean's value is
+    If Val(Main.fetched_version) = Val(Main.installed_version) Then Shell "echo '\e[42m✓ SUCCESS:\e[0m \e[92mYou have the latest update installed in your pearintosh system!\e[0m'"
+Endif
 End                                                                                         'ending the server_version() function
 
 Public Sub is_available()                                                                   'starting is_available() function. It checks if the available version is installed

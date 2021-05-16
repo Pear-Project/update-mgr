@@ -7,11 +7,10 @@
 'For questions about this software, mail Alex at alex@pearos.xyz
 
 Public Sub download()                                                                                                                           'starting the download() function declare
-  Shell "cd /tmp/system-update/ && wget https://updates.pearos.xyz/pearOS_updatefile_amd64.zip" Wait                                            'getting the file from server
+  Shell "cd /tmp/system-update/ && wget https://updates.pearos.xyz/pearOS_updatefile_amd64.zip > /dev/null 2>&1" Wait                                            'getting the file from server
   Print "Downloaded"                                                                                                                            'printing the status of function
 End                                                                                                                                             'ending the function
 
 Public Sub install()                                                                                                                            'starting the install() function declare
-  Shell "unzip /tmp/system-update/pearOS_updatefile_amd64.zip -d /tmp/system-update" Wait                                                       'extracting the downloaded update in the temp folder
-  Print "Installed"                                                                                                                             'printing the status of function
+  Shell "unzip /tmp/system-update/pearOS_updatefile_amd64.zip -d /tmp/system-update > /dev/null 2>&1" Wait                                           'extracting the downloaded update in the temp folder      
 End                                                                                                                                             'ending download() function

@@ -1,7 +1,11 @@
 # Gambas Project File 3.0
+Title=Update Checker
 Startup=Main
-Version=0.0.17
+Version=11.1.1
+Description="Checks for updates in pearOS. It downloads a file from the updates server, and runs the check scripts to compare installed version vs. latest available version"
+Authors="Alexandru Balan <alex@pearos.xyz>"
 TabSize=2
 Language=en_US
 SourcePath=/home/pear/Desktop/new
+Vendor=PearProject
 Packager=1
