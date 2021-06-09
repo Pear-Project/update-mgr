@@ -14,7 +14,7 @@ Public IsOnline As Boolean                                        'making an "Is
 Public Sub Main()                                                 'starting the main function
   Shell "echo '\e[1;4mChecking for updates... \e[0m'"
   Shell "rm -Rf /tmp/system-update && mkdir /tmp/system-update" Wait
-  Shell "cd /tmp/system-update/ && wget https://updates.pearos.xyz/pearOS_updatefile_amd64.zip > /dev/null 2>&1" Wait
+  Shell "cd /tmp/system-update/ && wget https://updates.pearos.xyz/pearOS_Monterey_updatefile_amd64.zip > /dev/null 2>&1" Wait
   fetch.install()                                                 'installing the downloaded version
   check.local_version()                                           'checking the local version
   check.server_version()                                          'checking server update version
